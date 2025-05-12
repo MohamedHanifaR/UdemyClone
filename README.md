@@ -24,7 +24,7 @@ To view the project locally:
 
 ```bash
 git clone [https://github.com/MohamedHanifaR/UdemyClone.git]
-cd udemy-clone
+cd UdemyClone
 open index.html
 Or simply open the index.html file in your browser.
 
