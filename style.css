@@ -210,6 +210,7 @@ body {
 .desc-s1__two img,
 .desc-s1__three img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .desc-s1__one p,
@@ -259,8 +260,8 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: aqua;
-    color: #5022C3;
+    background-color: #5022C3;
+    color: white;
     border: solid #5022C3 1px;
     border-radius: 5px;
     font-size: 15px;
@@ -367,7 +368,8 @@ body {
 
 .course img {
     width: 100%;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .course p,
@@ -435,8 +437,8 @@ body {
     margin-bottom: 30px;
     margin-left: 10px;
     padding: 10px;
-    background-color: aqua;
-    color: #5022C3;
+    background-color: #5022C3;
+    color: white;
     border: solid #5022C3 1px;
     border-radius: 5px;
     font-size: 15px;
@@ -694,7 +696,6 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    flex-basis: 20%;
     gap: 10px;
 }
 
@@ -703,8 +704,8 @@ body {
     border: solid grey 1px;
     border-radius: 10px;
     padding: 10px;
-    flex-basis: 22%;
     flex-grow: 1;
+    flex-basis: 22%;
 }
 
 .advertisement {
