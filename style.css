@@ -7,6 +7,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
 .navbar-s1 {
     background-color: #5022C3;
     color: white;
@@ -29,8 +35,9 @@ body {
 
 .navbar-s2 {
     background-color: white;
-    color: grey;
+    color: black;
     padding: 10px;
+    font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -39,17 +46,30 @@ body {
     gap: 5px;
 }
 
+.navbar-s2 button,
+.navbar-s2 a {
+    cursor: pointer;
+}
+
 .udemylogo {
-    height: 40px;
+    height: 35px;
     width: 150px;
 }
 
 .navbar-s2__search {
     display: flex;
+    justify-content: flex-start;
     padding: 10px;
     border: solid grey 1px;
     border-radius: 30px;
-    width: 600px;
+    width: 40%;
+    gap: 20px;
+    position: relative;
+}
+
+.navbar-s2__search__input {
+    width: 100%;
+    align-items: center;
     gap: 10px;
 }
 
@@ -59,6 +79,7 @@ body {
 }
 
 .navbar-s2__search input {
+    width: 95%;
     flex-grow: 1;
     border: none;
     font-size: 15px;
@@ -66,6 +87,187 @@ body {
 
 .navbar-s2__search input:focus {
     outline: none;
+}
+
+.navbar-s2__search__list {
+    position: absolute;
+    top: 103%;
+    left: 0px;
+    padding: 10px;
+    width: 97%;
+    background-color: white;
+    border: 1px solid silver;
+    display: none;
+}
+
+/*
+.navbar-s2__search__input input:hover .navbar-s2__search__list {
+    display: block;}
+*/
+.navbar-s2__search__list__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.navbar-s2__search__list__desc h4 {
+    padding: 10px;
+}
+
+
+.navbar-s2__search__list__desc li {
+    list-style-type: none;
+    align-items: center;
+}
+
+.navbar-s2__list {
+    display: flex;
+    padding: 10px;
+}
+
+.navbar-s2__list:hover {
+    background-color: #EDE5F9;
+}
+
+.navbar-s2__list a {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    display: block;
+}
+
+.navbar-s2-pricing {
+    text-decoration: none;
+    color: black;
+    height: 20px;
+    padding: 10px;
+}
+
+.navbar-s2-pricing:hover {
+    height: 20px;
+    padding: 10px;
+    background-color: #EDE5F9;
+    color: #5022C3;
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar-s2-udemybusiness {
+    position: relative;
+    text-align: center;
+    height: 20px;
+    padding: 10px;
+}
+
+.navbar-s2-udemybusiness:hover {
+    padding: 10px;
+    height: 20px;
+    background-color: #EDE5F9;
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar-s2-udemybusiness a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-s2-udemybusiness a:hover {
+    color: #5022C3;
+}
+
+.navbar-s2-udemybusiness__popup {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    padding: 20px;
+    width: 250px;
+    background-color: white;
+    color: black;
+    border: 1px solid silver;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+.navbar-s2-udemybusiness__popup h3 {
+    margin-bottom: 10px;
+}
+
+.navbar-s2-udemybusiness__popup button {
+    background-color: #5022C3;
+    color: white;
+    margin: 1%;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.navbar-s2-udemybusiness:hover .navbar-s2-udemybusiness__popup {
+    display: block;
+}
+
+.navbar-s2-teachonudemy {
+    position: relative;
+    text-align: center;
+    height: 20px;
+    padding: 10px;
+}
+
+.navbar-s2-teachonudemy:hover {
+    background-color: #EDE5F9;
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.navbar-s2-teachonudemy a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-s2-teachonudemy a:hover {
+    color: #5022C3;
+}
+
+.navbar-s2-teachonudemy__popup {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background-color: white;
+    color: black;
+    border: 1px solid silver;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+.navbar-s2-teachonudemy__popup h3 {
+    margin-bottom: 10px;
+}
+
+.navbar-s2-teachonudemy__popup button {
+    background-color: #5022C3;
+    color: white;
+    margin: 1%;
+    padding: 10px;
+    width: 100%;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar-s2-teachonudemy:hover .navbar-s2-teachonudemy__popup {
+    display: block;
+}
+
+.navbar-s2a__cart {
+    position: relative;
 }
 
 .navbar-s2__cart {
@@ -79,9 +281,85 @@ body {
 .navbar-s2__cart:hover {
     height: 40px;
     width: 40px;
-    background-color: aqua;
+    background-color: #EDE5F9;
     border: none;
     border-radius: 5px;
+}
+
+.navbar-s2__cart img {
+    height: 20px;
+    width: 20px;
+}
+
+.navbar-s2__cart__popup {
+    position: absolute;
+    padding: 20px 0px;
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 5px;
+    top: 100%;
+    right: 0px;
+    width: 250px;
+    text-align: center;
+    display: none;
+}
+
+.navbar-s2__cart__popup p {
+    margin-bottom: 10px;
+}
+
+.navbar-s2__cart__popup a {
+    color: #5022C3;
+    text-decoration: none;
+}
+
+.navbar-s2a__cart:hover .navbar-s2__cart__popup {
+    display: block;
+}
+
+
+.navbar-s2__login {
+    background-color: white;
+    color: #5022C3;
+    border: solid #5022C3 1px;
+    border-radius: 5px;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navbar-s2__login:hover {
+    background-color: #EDE5F9;
+    color: #5022C3;
+    border: solid #5022C3 1px;
+    border-radius: 5px;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navbar-s2__signup {
+    background-color: #5022C3;
+    color: white;
+    border: solid #5022C3 1px;
+    border-radius: 5px;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navbar-s2__signup:hover {
+    background-color: #6038c5;
+    color: white;
+    border: solid #5022C3 1px;
+    border-radius: 5px;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    font-weight: bold;
 }
 
 .navbar-s2__internet {
@@ -95,76 +373,41 @@ body {
 .navbar-s2__internet:hover {
     height: 40px;
     width: 40px;
-    background-color: aqua;
+    background-color: #EDE5F9;
     border: solid #5022C3 1px;
     border-radius: 5px;
-}
-
-.navbar-s2__cart img {
-    height: 25px;
-    width: 25px;
 }
 
 .navbar-s2__internet img {
-    height: 20px;
-    width: 20px;
-}
-
-.navbar-s2__login {
-    background-color: white;
-    color: #5022C3;
-    border: solid #5022C3 1px;
-    border-radius: 5px;
-    height: 40px;
-    width: 90px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navbar-s2__login:hover {
-    background-color: aqua;
-    color: #5022C3;
-    border: solid #5022C3 1px;
-    border-radius: 5px;
-    height: 40px;
-    width: 90px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navbar-s2__signup {
-    background-color: #5022C3;
-    color: white;
-    border: solid #5022C3 1px;
-    border-radius: 5px;
-    height: 40px;
-    width: 90px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navbar-s2__signup:hover {
-    background-color: #6038c5;
-    color: white;
-    border: solid #5022C3 1px;
-    border-radius: 5px;
-    height: 40px;
-    width: 90px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navbar-s2 p,
-.navbar-s2 button {
-    cursor: pointer;
+    height: 15px;
+    width: 15px;
 }
 
 .header-image {
-    width: 100%;
+    padding: 0px 3%;
+    width: 94%;
+}
+
+.header-image-s1 {
+    position: relative;
+}
+
+.header-image__desc {
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    width: 25%;
+    padding: 15px 15px 25px 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+.header-image__desc h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .desc-s1a {
@@ -716,6 +959,7 @@ body {
     align-items: center;
     flex-basis: 40%;
 }
+
 .advertisement-s1 h1 {
     font-family: 'Times New Roman', Times, serif;
     padding-top: 20px;
@@ -738,7 +982,7 @@ body {
 
 .advertisement-s1 button:hover {
     padding: 10px;
-    background-color: aqua;
+    background-color: #EDE5F9;
     color: #5022C3;
     border: solid #5022C3 1px;
     border-radius: 5px;
@@ -772,6 +1016,11 @@ body {
     padding-top: 20px;
 }
 
+.trending__main__sub img {
+    height: 20px;
+    width: 20px;
+}
+
 .trending__main__sub h2,
 .trending__main__sub h1,
 .trending__main__sub h3 {
@@ -787,7 +1036,8 @@ body {
     color: #5022C3;
     cursor: pointer;
 }
-.trending__main__sub h3:hover{
+
+.trending__main__sub h3:hover {
     text-decoration: underline;
 }
 
@@ -799,21 +1049,27 @@ body {
     border-radius: 5px;
     width: 100%;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bolder;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .trending__main__sub button:hover {
     padding: 10px;
-    background-color: aqua;
+    background-color: #EDE5F9;
     color: #5022C3;
     border: solid #5022C3 1px;
     border-radius: 5px;
     width: 100%;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
-.footer-image {padding: 50px 100px;
+.footer-image {
+    padding: 50px 100px;
     background-color: #F6F7F9;
     display: flex;
     flex-wrap: wrap;
